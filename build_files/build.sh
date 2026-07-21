@@ -21,7 +21,7 @@ dnf5 install -y tmux
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
- sudo dnf5 copr enable avengemedia/dms
+ dnf5 copr enable avengemedia/dms
  dnf5 install -y niri dms
  systemctl --user add-wants niri.service dms
  dnf5 copr disable avengemedia/dms
