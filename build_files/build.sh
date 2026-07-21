@@ -21,10 +21,15 @@ dnf5 install -y tmux
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-dnf copr enable avengemedia/dms
-dnf install niri dms
-systemctl add-wants niri.service dms
-dnf copr disable avengemedia/dms
+ sudo dnf5 copr enable avengemedia/dms
+ dnf5 install -y niri dms
+ systemctl --user add-wants niri.service dms
+ dnf5 copr disable avengemedia/dms
+
+# headless install command from dms website
+# sudo -v
+# curl -fsSL https://install.danklinux.com | sh -s -- \
+#   -c niri -t ghostty --include-deps dms-greeter --replace-configs-all -y
 
 #### Example for enabling a System Unit File
 
