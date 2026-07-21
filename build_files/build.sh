@@ -24,7 +24,7 @@ dnf5 install -y tmux
  dnf5 copr enable avengemedia/dms
  dnf5 install -y niri dms
 # systemctl --user add-wants niri.service dms
- dnf5 copr disable avengemedia/dms
+# dnf5 copr disable avengemedia/dms
 
 # headless install command from dms website
 # sudo -v
