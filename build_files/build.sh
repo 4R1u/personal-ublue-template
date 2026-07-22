@@ -28,7 +28,7 @@ dnf5 install -y niri dms dms-greeter dankcalendar-git cava ghostty
 # dms setup
 systemctl disable gdm.service
 # dms greeter enable
-dms greeter sync
+# dms greeter sync
 systemctl enable greetd.service
 # systemctl --user add-wants niri.service dms
 # dnf5 copr disable avengemedia/dms
