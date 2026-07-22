@@ -21,9 +21,9 @@ dnf5 install -y tmux
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-dnf5 copr enable avengemedia/dms
-dnf5 copr enable avengemedia/danklinux
-dnf copr enable scottames/ghostty
+dnf5 copr enable avengemedia/dms -y
+dnf5 copr enable avengemedia/danklinux -y
+dnf5 copr enable scottames/ghostty -y
 dnf5 install -y niri dms dms-greeter dankcalendar-git cava ghostty
 dms setup
 systemctl --user add-wants niri.service dms
