@@ -26,6 +26,9 @@ dnf5 copr enable avengemedia/danklinux -y
 dnf5 copr enable scottames/ghostty -y
 dnf5 install -y niri dms dms-greeter dankcalendar-git cava ghostty
 # dms setup
+systemctl disable gdm.service
+dms greeter enable
+dms greeter sync
 # systemctl --user add-wants niri.service dms
 # dnf5 copr disable avengemedia/dms
 # dnf5 copr disable avengemedia/danklinux
