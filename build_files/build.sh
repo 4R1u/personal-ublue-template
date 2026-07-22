@@ -24,7 +24,7 @@ dnf5 install -y tmux
 dnf5 copr enable avengemedia/dms -y
 dnf5 copr enable avengemedia/danklinux -y
 dnf5 copr enable scottames/ghostty -y
-dnf5 install -y niri dms dms-greeter dankcalendar-git cava ghostty
+dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty swaylock fuzzel qt6ct
 # dms setup
 systemctl disable gdm.service
 # dms greeter enable
