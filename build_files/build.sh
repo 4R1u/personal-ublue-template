@@ -31,6 +31,7 @@ systemctl disable gdm.service
 # dms greeter enable
 # dms greeter sync
 systemctl enable greetd.service
+systemctl --user enable --now dsearch
 # systemctl --user add-wants niri.service dms
 # dnf5 copr disable avengemedia/dms
 # dnf5 copr disable avengemedia/danklinux
