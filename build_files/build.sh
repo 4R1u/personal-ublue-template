@@ -25,7 +25,7 @@ dnf5 copr enable avengemedia/dms -y
 dnf5 copr enable avengemedia/danklinux -y
 dnf5 copr enable scottames/ghostty -y
 dnf5 copr enable eddsalkield/swaylock-effects -y
-dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock-effects fuzzel qt6ct matugen khal danksearch
+dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch
 # dms setup
 systemctl disable gdm.service
 # dms greeter enable
