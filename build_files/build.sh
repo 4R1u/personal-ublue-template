@@ -29,7 +29,7 @@ useradd -m -G wheel r41u
 
 dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch
 
-runuser -u r41u dms setup alttaab
+runuser -u r41u dms setup alttab
 runuser -u r41u dms setup binds
 runuser -u r41u dms setup colors
 runuser -u r41u dms setup cursor
