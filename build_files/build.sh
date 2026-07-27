@@ -36,8 +36,8 @@ dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swa
 # setpriv --reuid 1000 dms setup layout
 # setpriv --reuid 1000 dms setup outputs
 # setpriv --reuid 1000 dms setup windowrules
-# systemctl disable gdm.service
-# systemctl enable greetd.service
+systemctl disable gdm.service
+systemctl enable greetd.service
 # setpriv --reuid 1000 dms greeter enable
 # setpriv --reuid 1000 dms greeter sync
 # systemctl enable greetd.service

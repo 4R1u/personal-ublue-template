@@ -8,7 +8,9 @@ drivers (bazzite-dx-nvidia-gnome).
 > [!NOTE]
 > This image doesn't set up the DMS files and keybinds for you. You will have
 > to set it all up in the settings window yourself. You will also have to run
-> `dms greeter sync`.
+> `dms greeter sync`, `sudo systemctl disable gdm`,
+> `sudo systemctl enable greetd`, `systemctl --user enable --now dsearch`,
+> and `systemctl --user add-wants niri.service dms`.
 
 This image will most likely be a temporary thing until
 [Zirconium's](https://github.com/zirconium-dev) Nvidia images support Secure
