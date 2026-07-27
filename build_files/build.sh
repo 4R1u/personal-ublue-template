@@ -21,13 +21,13 @@ dnf5 install -y tmux
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-dnf5 copr enable avengemedia/dms -y
-dnf5 copr enable avengemedia/danklinux -y
-dnf5 copr enable scottames/ghostty -y
-dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch
+# dnf5 copr enable avengemedia/dms -y
+# dnf5 copr enable avengemedia/danklinux -y
+# dnf5 copr enable scottames/ghostty -y
+# dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch
 # dms setup
-systemctl disable gdm.service
-systemctl enable greetd.service
+# systemctl disable gdm.service
+# systemctl enable greetd.service
 # dms greeter enable
 # dms greeter sync
 # systemctl enable greetd.service
@@ -38,9 +38,9 @@ systemctl enable greetd.service
 # dnf5 copr disable scottames/ghostty
 
 # headless install command from dms website
-# sudo -v
-# curl -fsSL https://install.danklinux.com | sh -s -- \
-#   -c niri -t ghostty --include-deps dms-greeter --replace-configs-all -y
+sudo -u \#1000 -v
+sudo -u \#1000 curl -fsSL https://install.danklinux.com | sh -s -- \
+  -c niri -t ghostty --include-deps dms-greeter --replace-configs-all -y
 
 #### Example for enabling a System Unit File
 
