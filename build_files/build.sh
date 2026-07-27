@@ -29,20 +29,20 @@ useradd -m -G wheel r41u
 
 dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch
 
-runuser -u r41u dms setup alttab
-runuser -u r41u dms setup binds
-runuser -u r41u dms setup colors
-runuser -u r41u dms setup cursor
-runuser -u r41u dms setup layout
-runuser -u r41u dms setup outputs
-runuser -u r41u dms setup windowrules
+setpriv --reuid 1000 dms setup alttab
+setpriv --reuid 1000 dms setup binds
+setpriv --reuid 1000 dms setup colors
+setpriv --reuid 1000 dms setup cursor
+setpriv --reuid 1000 dms setup layout
+setpriv --reuid 1000 dms setup outputs
+setpriv --reuid 1000 dms setup windowrules
 # systemctl disable gdm.service
 # systemctl enable greetd.service
-runuser -u r41u dms greeter enable
-runuser -u r41u dms greeter sync
+setpriv --reuid 1000 dms greeter enable
+setpriv --reuid 1000 dms greeter sync
 # systemctl enable greetd.service
-runuser -u r41u systemctl --user enable --now dsearch
-runuser -u r41u systemctl --user add-wants niri.service dms
+setpriv --reuid 1000 systemctl --user enable --now dsearch
+setpriv --reuid 1000 systemctl --user add-wants niri.service dms
 # dnf5 copr disable avengemedia/dms
 # dnf5 copr disable avengemedia/danklinux
 # dnf5 copr disable scottames/ghostty
