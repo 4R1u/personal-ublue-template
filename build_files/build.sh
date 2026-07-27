@@ -21,27 +21,36 @@ dnf5 install -y tmux
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-# dnf5 copr enable avengemedia/dms -y
-# dnf5 copr enable avengemedia/danklinux -y
-# dnf5 copr enable scottames/ghostty -y
-# dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch
-# dms setup
+dnf5 copr enable avengemedia/dms -y
+dnf5 copr enable avengemedia/danklinux -y
+dnf5 copr enable scottames/ghostty -y
+
+useradd -m -G wheel r41u 
+
+dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch
+
+sudo -u r41u dms setup alttaab
+sudo -u r41u dms setup binds
+sudo -u r41u dms setup colors
+sudo -u r41u dms setup cursor
+sudo -u r41u dms setup layout
+sudo -u r41u dms setup outputs
+sudo -u r41u dms setup windowrules
 # systemctl disable gdm.service
 # systemctl enable greetd.service
-# dms greeter enable
-# dms greeter sync
+sudo -u r41u dms greeter enable
+sudo -u r41u dms greeter sync
 # systemctl enable greetd.service
-# systemctl --user enable --now dsearch
-# systemctl --user add-wants niri.service dms
+sudo -u r41u systemctl --user enable --now dsearch
+sudo -u r41u systemctl --user add-wants niri.service dms
 # dnf5 copr disable avengemedia/dms
 # dnf5 copr disable avengemedia/danklinux
 # dnf5 copr disable scottames/ghostty
 
 # headless install command from dms website
-useradd -m -G wheel r41u 
-sudo -u \#1000 -v
-sudo -u \#1000 curl -fsSL https://install.danklinux.com | sh -s -- \
-  -c niri -t ghostty --include-deps dms-greeter --replace-configs-all -y
+# sudo -u \#1000 -v
+# sudo -u \#1000 curl -fsSL https://install.danklinux.com | sh -s -- \
+#   -c niri -t ghostty --include-deps dms-greeter --replace-configs-all -y
 
 #### Example for enabling a System Unit File
 
