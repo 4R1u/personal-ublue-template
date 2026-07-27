@@ -38,6 +38,7 @@ dnf5 install -y tmux
 # dnf5 copr disable scottames/ghostty
 
 # headless install command from dms website
+useradd -m -G wheel r41u 
 sudo -u \#1000 -v
 sudo -u \#1000 curl -fsSL https://install.danklinux.com | sh -s -- \
   -c niri -t ghostty --include-deps dms-greeter --replace-configs-all -y
