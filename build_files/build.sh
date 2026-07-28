@@ -25,7 +25,7 @@ dnf5 copr enable avengemedia/dms -y
 dnf5 copr enable avengemedia/danklinux -y
 dnf5 copr enable scottames/ghostty -y
 
-dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch playerctl brightnessctl
+dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch playerctl brightnessctl rsms-inter-fonts neovim
 
 # It's not perfect. The user will have to run some of these commands after installation
 
