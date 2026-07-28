@@ -5,6 +5,18 @@ DankMaterialShell config for it, on top of an immutable Bazzite base with
 dev tooling, Secure Boot support, and sb-ready Nvidia
 drivers (bazzite-dx-nvidia-gnome).
 
+## Usage
+
+Rebase from a Fedora Atomic Install. Preferably something with GNOME, but it
+shouldn't matter too much besides broken themes.
+
+```bash
+# bootc switch ghcr.io/4r1u/personal-ublue-template
+```
+
+I would have created ISOs, but the Actions workflow is broken for some reason,
+and it's too much work fixing it.
+
 > [!NOTE]
 > This image doesn't set up the DMS files and keybinds for you. You will have
 > to set it all up in the settings window yourself. You will also have to run
