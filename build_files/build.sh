@@ -25,7 +25,7 @@ dnf5 copr enable avengemedia/dms -y
 dnf5 copr enable avengemedia/danklinux -y
 dnf5 copr enable scottames/ghostty -y
 
-dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch
+dnf5 install -y niri dms dms-greeter dankcalendar-git cava alacritty ghostty swaylock fuzzel qt6ct matugen khal danksearch playerctl brightnessctl
 
 # It's not perfect. The user will have to run some of these commands after installation
 
@@ -43,9 +43,9 @@ systemctl enable greetd.service
 # systemctl enable greetd.service
 # setpriv --reuid 1000 systemctl --user enable --now dsearch
 # setpriv --reuid 1000 systemctl --user add-wants niri.service dms
-# dnf5 copr disable avengemedia/dms
-# dnf5 copr disable avengemedia/danklinux
-# dnf5 copr disable scottames/ghostty
+dnf5 copr disable avengemedia/dms
+dnf5 copr disable avengemedia/danklinux
+dnf5 copr disable scottames/ghostty
 
 #### Example for enabling a System Unit File
 
